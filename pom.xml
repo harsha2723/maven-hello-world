@@ -105,6 +105,26 @@
               </compilerArgs>
           </configuration>
       </plugin>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.9-SNAPSHOT</version>
+   </plugin>
     </plugins>
   </build>
+
+  <profiles>
+  <profile>
+  <id>sonar</id>
+  <activation>
+  <activeByDefault>true</activeByDefault>
+  </activation>
+  <properties>
+  <!-- optional URL to server. Default value is http://localhost:9000 -->
+  <sonar.host.url>
+  http://35.92.185.189:9000/
+  </sonar.host.url>
+  </properties >
+  </profile>
+  </profiles>
 </project>
